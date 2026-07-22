@@ -1,0 +1,40 @@
+# This file specifies files and directories to be ignored by gcloud commands (like Cloud Run deploys).
+# Any file matched by a line in this file will not be uploaded to Google Cloud.
+
+# Ignore git directory
+.git/
+.gitignore
+
+# Ignore node_modules
+node_modules/
+**/node_modules/
+apps/web/node_modules/
+apps/server/node_modules/
+
+# Ignore Next.js build cache and output
+.next/
+**/.next/
+apps/web/.next/
+out/
+**/out/
+
+# Ignore local build outputs
+dist/
+**/dist/
+apps/server/dist/
+build/
+**/build/
+
+# Ignore env files with secrets
+.env
+.env.*
+!.env.example
+
+# Ignore OS files and log/error files
+.DS_Store
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+tsconfig.tsbuildinfo

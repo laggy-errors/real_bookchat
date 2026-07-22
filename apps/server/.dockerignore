@@ -1,0 +1,18 @@
+# Ignore node_modules
+node_modules
+**/node_modules
+
+# Ignore local build outputs
+dist
+**/dist
+build
+**/build
+
+# Ignore env files with secrets
+.env
+.env.*
+!.env.example
+
+# Ignore OS files and log files
+.DS_Store
+*.log

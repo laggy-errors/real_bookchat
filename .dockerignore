@@ -1,0 +1,35 @@
+# This file specifies files and directories to be ignored by Docker.
+
+# Ignore git directory
+.git
+.gitignore
+
+# Ignore node_modules
+node_modules
+**/node_modules
+apps/web/node_modules
+apps/server/node_modules
+
+# Ignore Next.js build cache and output
+.next
+**/.next
+apps/web/.next
+out
+**/out
+
+# Ignore local build outputs
+dist
+**/dist
+apps/server/dist
+build
+**/build
+
+# Ignore env files with secrets
+.env
+.env.*
+!.env.example
+
+# Ignore OS files and log files
+.DS_Store
+*.log
+tsconfig.tsbuildinfo
