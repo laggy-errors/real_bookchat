@@ -44,6 +44,10 @@ app.use(
         connectSrc: ["'self'", "https:", "http:", "wss:", "ws:"],
       },
     },
+    // Default is 'same-origin', which severs window.opener and breaks the
+    // Google Sign-In popup's postMessage()/window.close() flow. 'unsafe-none'
+    // is the standard value for apps that intentionally use window.opener.
+    crossOriginOpenerPolicy: { policy: 'unsafe-none' },
   })
 );
 app.use(
